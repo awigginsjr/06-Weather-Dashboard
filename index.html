@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="assets/style.css" href="assets/reset.css" />
+    <title>Weather Dashboard</title>
+</head>
+
+<body>
+    <h1>OpenWeatherMap API Key Test</h1>
+    <button id="test-api-key-btn">Test API Key</button>
+
+    <script>
+        const weatherApiKey = 'bff5cff573de67ba3fa31f78ce078c13';
+        const weatherApiUrl = 'https://api.openweathermap.org';
+
+        function testApiKey(apiKey) {
+            const testCity = 'London';
+            const apiUrl = `${weatherApiUrl}/data/2.5/weather?q=${testCity}&appid=${apiKey}`;
+
+            fetch(apiUrl)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok. Status: ' + response.status);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    console.log('API Key Test Success:', data);
+                    alert('API Key is valid. Successfully fetched weather data.');
+                })
+                .catch(error => {
+                    console.error('API Key Test Failed:', error);
+                    alert('API Key is invalid or there was an error fetching weather data.');
+                });
+        }
+
+        document.getElementById('test-api-key-btn').addEventListener('click', function () {
+            testApiKey(weatherApiKey);
+        });
+    </script>
+</body>
+
+</html>
