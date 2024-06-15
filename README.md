@@ -11,7 +11,7 @@ The dashboard will display the date, an icon representation of weather condition
 
 The following image demonstrates the web application's appearance and functionality:
 
-![screenshot](will add here)
+![screenshot](/assets/images/weatherapp.png)
 
 ## Usage
 
@@ -23,4 +23,6 @@ If you have any additional questions, concerns, or would like to view more of my
 
 GitHub ~ [https://github.com/awigginsjr](https://github.com/awigginsjr)
 
-Repository ~ [](will add here )
+Repository ~ [https://github.com/awigginsjr/06-Weather-Dashboard](https://github.com/awigginsjr/06-Weather-Dashboard)
+
+Deployed App ~ []()
