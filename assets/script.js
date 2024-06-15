@@ -140,53 +140,6 @@ function displayForecast(dailyForecast) { // Function for displaying 5 day forec
     }
 }
 
-// Function to set background image based on weather condition
-// function setBackgroundBasedOnWeather(condition) {
-//     let backgroundImage = '';
-//     switch(condition.toLowerCase()) {
-//       case 'clouds': backgroundImage = '/assets/images/cloudy.jpg'; break;
-//       case 'rain': backgroundImage = '/assets/images/rainy.jpg'; break;
-//       case 'snow': backgroundImage = '/assets/images/snowy.jpg'; break;
-//       case 'clear': backgroundImage = '/assets/images/sunny.jpg'; break;
-//       default: backgroundImage = '/assets/images/default.jpg';
-//     }
-//     // Create or update the style element to set background image
-//     let styleNode = document.createElement("style");
-//     document.head.appendChild(styleNode);
-//     styleNode.innerHTML = `html body { background-image: url('${backgroundImage}'); }`;
-// }
-
-// // Function to handle geolocation success
-// function handleGeolocationSuccess(position) {
-//     const { latitude: lat, longitude: lon } = position.coords;
-  
-//     // Fetch weather data from openweathermap API
-//     fetch(`${weatherApiUrl}/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial&appid=${weatherApiKey}`)
-//       .then(response => response.json())
-//       .then(data => {
-//         const condition = data.weather[0].main;
-//         setBackgroundBasedOnWeather(condition);
-//       })
-//       .catch(error => {
-//         console.error('Error fetching weather data:', error);
-//         setBackgroundBasedOnWeather('default'); // Set default background on error
-//       });
-// }
-
-// // Function to handle geolocation error
-// function handleGeolocationError(error) {
-//     console.error('Error getting geolocation:', error);
-//     setBackgroundBasedOnWeather('default'); // Set default background on error
-//   }
-  
-//   // Check if geolocation is available
-//   if (navigator.geolocation) {
-//     navigator.geolocation.getCurrentPosition(handleGeolocationSuccess, handleGeolocationError);
-//   } else {
-//     console.error('Geolocation is not supported by this browser.');
-//     setBackgroundBasedOnWeather('default'); // Set default background if geolocation is not supported
-// }
-
 function displayItems(city, data) { // Function to display items
     displayCurrentWeather(city, data.list[0], data.city.timezone); // Display current weather
     displayForecast(data.list); // Display 5 day forecast
