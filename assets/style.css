@@ -4,7 +4,8 @@
 
 /* background image */
 html, body {
-    background-image: url('/assets/images/default.png');
+    /* background-image: url('/assets/images/default.png'); */
+    background-image: url('https://github.com/awigginsjr/06-Weather-Dashboard/blob/main/assets/images/default.png?raw=true');
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 100%;
