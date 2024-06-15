@@ -198,5 +198,3 @@ searchForm.addEventListener('submit', searchFormSubmit); // Add event listener f
 searchHistoryContainer.addEventListener('click', searchHistoryClick); // Add event listener for search history click
 
 
-// getCoords("Buffalo");
-
