@@ -2,7 +2,7 @@ var searchHistory = []; // Array to store search history
 const weatherApiKey= 'bff5cff573de67ba3fa31f78ce078c13'; // API key for OpenWeatherMap
 const weatherApiUrl = 'https://api.openweathermap.org'; // URL for OpenWeatherMap API
 
-// DOM element references
+// DOM element references for search form, search input, today's weather, 5 day forecast, and search history
 var searchForm = document.querySelector('#search-form'); // Form element for search
 var searchInput = document.querySelector('#search-input'); // Input element for search
 var todayContainer = document.querySelector('#today'); // Container for today's weather
@@ -122,7 +122,6 @@ function displayForecastCard(forecast) { // Function to display forecast card
     forecastContainer.append(col); // Append column to forecast container
 }
 
-
 function displayForecast(dailyForecast) { // Function for displaying 5 day forecast
     var startDt = dayjs().add(1, 'day').startOf('day').unix(); // Get start date for forecast
     var endDt = dayjs().add(6, 'day').startOf('day').unix(); // Get end date for forecast
@@ -199,5 +198,5 @@ searchForm.addEventListener('submit', searchFormSubmit); // Add event listener f
 searchHistoryContainer.addEventListener('click', searchHistoryClick); // Add event listener for search history click
 
 
-getCoords("Buffalo");
+// getCoords("Buffalo");
 

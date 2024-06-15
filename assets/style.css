@@ -4,7 +4,7 @@
 
 /* background image */
 html, body {
-    background-image: url('/assets/images/default.jpg');
+    background-image: url('/assets/images/default.png');
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 100%;
