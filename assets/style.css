@@ -10,6 +10,8 @@ html, body {
     min-height: 100%;
     margin: 10px;
     padding: 10px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+      Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 }
 
 body {
@@ -90,11 +92,168 @@ a:hover {
 .card {
     border: 1px solid #1a1a1a;
     margin-bottom: 1rem;
+    background-color: #668acd2e;
+    border-radius: 0.3rem;
 }
 
 .card .card-body {
+    padding: 1rem;
     padding: 0.375rem;
     background-color: #668acd2e;
 }
 
+.card:hover {
+    background-color: #668acd;
+}
+
+/* Flexing */
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
   
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+[class*='col-'] {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.five-day-card {
+    position: relative;
+    width: 20%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+  
+.weather-img {
+    border-style: none;
+    vertical-align: middle;
+}
+  
+.history-btn {
+    text-align: center;
+    display: inline-block;
+    padding: 0.5rem 1.2rem;
+    margin: 0.5rem;
+    width: 100%;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 0.3rem;
+    border: 1px solid transparent;
+    outline: none;
+    color: #1a1a1a;
+    background-color: #aeaeae;
+    transition: color 0.2s ease-in-out, 
+    background-color 0.2s ease-in-out;
+}
+  
+.history-btn:hover {
+    background-color: #cecece;
+}
+  
+.search-button {
+    flex-wrap: wrap;
+    padding: 0.5rem 1.2rem;
+    margin: 0.5rem;
+    width: 100%;
+    background-color: #CCCCCC80;
+    color: #d9e9e8;
+}
+  
+.weather-search {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 0.75rem;
+    margin: 0.5rem !important;
+    color: #1a1a1a;
+    background-color: #ffffff;
+    margin: 0.625rem 0;
+    font-size: 1.2rem;
+    border: 1px solid #484848;
+    border-radius: 0.3rem;
+    box-shadow: 0 0 0.5rem #484848;
+}
+
+.weather-search input {
+    flex: 1;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    font-size: 1.2rem;
+    border: 1px solid #484848;
+    border-radius: 0.3rem;
+    box-shadow: 0 0 0.5rem #484848;
+}
+
+.weather-search:hover {
+    background-color: #f0f0f0;
+}
+
+#form-heading {
+    margin: 0.5rem;
+}
+  
+.weather-hr {
+    margin-left: 0.5rem;
+    width: 100%;
+}
+  
+.weather-header {
+    background: #CCCCCC80;
+    background: -webkit-linear-gradient(right, Red, #CCCCCC80);
+    background: -moz-linear-gradient(right, Red, #CCCCCC80);
+    background: linear-gradient(to left, Red, #CCCCCC80);
+    color: #d9e9e8;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    border-radius: 0.3rem;
+    border: 1px solid #484848;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+#forecast {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+
+#forecast .five-day-card {
+    flex: 1 1 180px;
+    padding: 10px;
+}
+
+/* Media Queries */
+@media screen and (min-width: 992px) {
+    .col-md-auto {
+      flex-grow: 1;
+      flex-basis: 0;
+    }
+
+    .col-lg-3 {
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+
+    .col-lg-9 {
+        flex: 0 0 75%;
+        max-width: 75%;
+    }
+}
